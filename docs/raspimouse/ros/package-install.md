@@ -75,36 +75,10 @@ robot: Raspberry Pi Mouse
     * [rt_usb_9axisimu_driver](https://github.com/rt-net/rt_usb_9axisimu_driver/tree/ros2-devel) : 9軸IMU制御パッケージ
 
 === "ROS 2 Jazzy"
-    Raspberry Piとノートパソコン等のPCそれぞれで、次のコマンドを実行します。
-
-    Raspberry Pi Mouseのパッケージをダウンロードします。
-    
-    ```sh
-    $ source /opt/ros/jazzy/setup.bash
-    $ mkdir -p ~/ros2_ws/src
-    $ cd ~/ros2_ws/src
-
-    # Download packages
-    $ git clone -b $ROS_DISTRO https://github.com/rt-net/raspimouse2.git
-    $ git clone -b $ROS_DISTRO https://github.com/rt-net/raspimouse_ros2_examples.git
-    $ git clone -b $ROS_DISTRO https://github.com/rt-net/raspimouse_slam_navigation_ros2.git
-
-    # Install dependencies
-    $ rosdep install -r -y --from-paths . --ignore-src
-    ```
-
-    Raspberry Pi Mouseのパッケージをビルドします。Raspberry Pi MouseとPCでコマンドが異なります。
+    Raspberry Piとノートパソコン等のPCそれぞれで次のコマンドを実行します。
 
     ```sh
-    # Raspberry Pi Mouseの場合
-    $ cd ~/ros2_ws
-    $ MAKEFLAGS=-j1 colcon build --symlink-install
-    $ source ~/ros2_ws/install/setup.bash
-
-    # PCの場合
-    $ cd ~/ros2_ws
-    $ colcon build --symlink-install
-    $ source ~/ros2_ws/install/setup.bash
+    $ sudo apt install ros-humble-raspimouse-slam-navigation
     ```
 
     これにより、以下のパッケージがインストールされます。
