@@ -78,7 +78,7 @@ robot: Raspberry Pi Mouse
     Raspberry Piとノートパソコン等のPCそれぞれで次のコマンドを実行します。
 
     ```sh
-    $ sudo apt install ros-humble-raspimouse-slam-navigation
+    $ sudo apt install ros-jazzy-raspimouse-slam-navigation
     ```
 
     これにより、以下のパッケージがインストールされます。
