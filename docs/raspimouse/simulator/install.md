@@ -58,6 +58,12 @@ Raspberry Pi Mouse Simulator（[rt-net/raspimouse_sim](https://github.com/rt-net
 === "ROS 2 Humble"
     次のコマンドを実行します。
 
+    下記コマンドを実行し、ROS 2の設定を読み込んでください。
+
+    ```sh
+    source /opt/ros/humble/setup.bash
+    ```
+
     シミュレータパッケージのインストール
 
     ```sh
@@ -78,27 +84,23 @@ Raspberry Pi Mouse Simulator（[rt-net/raspimouse_sim](https://github.com/rt-net
 
 === "ROS 2 Jazzy"
     次のコマンドを実行します。
-    
-    シミュレータパッケージとサンプルパッケージのダウンロードとインストール
-    
+
+    下記コマンドを実行し、ROS 2の設定を読み込んでください。
+
     ```sh
-    $ source /opt/ros/jazzy/setup.bash
-    $ mkdir -p ~/ros2_ws/src
-    $ cd ~/ros2_ws/src
+    source /opt/ros/jazzy/setup.bash
+    ```
 
-    # Download packages
-    $ git clone -b $ROS_DISTRO https://github.com/rt-net/raspimouse_sim.git
-    $ git clone -b $ROS_DISTRO https://github.com/rt-net/raspimouse2.git
-    $ git clone -b $ROS_DISTRO https://github.com/rt-net/raspimouse_ros2_examples.git
-    $ git clone -b $ROS_DISTRO https://github.com/rt-net/raspimouse_slam_navigation_ros2.git
+    シミュレータパッケージのインストール
 
-    # Install dependencies
-    $ rosdep install -r -y --from-paths . --ignore-src
+    ```sh
+    sudo apt install ros-$ROS_DISTRO-raspimouse-sim
+    ```
 
-    # make & install
-    $ cd ~/ros2_ws
-    $ colcon build --symlink-install
-    $ source ~/ros2_ws/install/setup.bash
+    サンプルパッケージのインストール
+
+    ```sh
+    sudo apt install ros-$ROS_DISTRO-raspimouse-slam-navigation
     ```
 
     キーボードで操作するためのパッケージをインストール
