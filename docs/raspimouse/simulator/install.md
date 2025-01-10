@@ -58,55 +58,43 @@ Raspberry Pi Mouse Simulator（[rt-net/raspimouse_sim](https://github.com/rt-net
 === "ROS 2 Humble"
     次のコマンドを実行します。
 
-    下記コマンドを実行し、ROS 2の設定を読み込んでください。
-
-    ```sh
-    source /opt/ros/humble/setup.bash
-    ```
-
     シミュレータパッケージのインストール
 
     ```sh
-    sudo apt install ros-$ROS_DISTRO-raspimouse-sim
+    sudo apt install ros-humble-raspimouse-sim
     ```
 
     サンプルパッケージのインストール
 
     ```sh
-    sudo apt install ros-$ROS_DISTRO-raspimouse-slam-navigation
+    sudo apt install ros-humble-raspimouse-slam-navigation
     ```
 
     キーボードで操作するためのパッケージをインストール
 
     ```sh
-    sudo apt install ros-$ROS_DISTRO-teleop-twist-keyboard
+    sudo apt install ros-humble-teleop-twist-keyboard
     ```
 
 === "ROS 2 Jazzy"
     次のコマンドを実行します。
 
-    下記コマンドを実行し、ROS 2の設定を読み込んでください。
-
-    ```sh
-    source /opt/ros/jazzy/setup.bash
-    ```
-
     シミュレータパッケージのインストール
 
     ```sh
-    sudo apt install ros-$ROS_DISTRO-raspimouse-sim
+    sudo apt install ros-jazzy-raspimouse-sim
     ```
 
     サンプルパッケージのインストール
 
     ```sh
-    sudo apt install ros-$ROS_DISTRO-raspimouse-slam-navigation
+    sudo apt install ros-jazzy-raspimouse-slam-navigation
     ```
 
     キーボードで操作するためのパッケージをインストール
 
     ```sh
-    sudo apt install ros-$ROS_DISTRO-teleop-twist-keyboard
+    sudo apt install ros-jazzy-teleop-twist-keyboard
     ```
 
 ## 動作確認（キーボードで操縦） {: #teleop}
