@@ -1980,30 +1980,8 @@ $<span class="w"> </span><span class="nb">source</span><span class="w"> </span>~
 </ul>
 </div>
 <div class="tabbed-block">
-<p>Raspberry Piとノートパソコン等のPCそれぞれで、次のコマンドを実行します。</p>
-<p>Raspberry Pi Mouseのパッケージをダウンロードします。</p>
-<div class="highlight"><pre><span></span><code>$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>/opt/ros/jazzy/setup.bash
-$<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/ros2_ws/src
-$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws/src
-
-<span class="c1"># Download packages</span>
-$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span><span class="nv">$ROS_DISTRO</span><span class="w"> </span>https://github.com/rt-net/raspimouse2.git
-$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span><span class="nv">$ROS_DISTRO</span><span class="w"> </span>https://github.com/rt-net/raspimouse_ros2_examples.git
-$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>-b<span class="w"> </span><span class="nv">$ROS_DISTRO</span><span class="w"> </span>https://github.com/rt-net/raspimouse_slam_navigation_ros2.git
-
-<span class="c1"># Install dependencies</span>
-$<span class="w"> </span>rosdep<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>-y<span class="w"> </span>--from-paths<span class="w"> </span>.<span class="w"> </span>--ignore-src
-</code></pre></div>
-<p>Raspberry Pi Mouseのパッケージをビルドします。Raspberry Pi MouseとPCでコマンドが異なります。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Raspberry Pi Mouseの場合</span>
-$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws
-$<span class="w"> </span><span class="nv">MAKEFLAGS</span><span class="o">=</span>-j1<span class="w"> </span>colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
-$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/ros2_ws/install/setup.bash
-
-<span class="c1"># PCの場合</span>
-$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>~/ros2_ws
-$<span class="w"> </span>colcon<span class="w"> </span>build<span class="w"> </span>--symlink-install
-$<span class="w"> </span><span class="nb">source</span><span class="w"> </span>~/ros2_ws/install/setup.bash
+<p>Raspberry Piとノートパソコン等のPCそれぞれで次のコマンドを実行します。</p>
+<div class="highlight"><pre><span></span><code>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ros-jazzy-raspimouse-slam-navigation
 </code></pre></div>
 <p>これにより、以下のパッケージがインストールされます。</p>
 <ul>
